@@ -67,14 +67,14 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Location</h3>
+            <h3 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">Service Area</h3>
             <div className="flex items-start gap-4 text-sm text-cream">
               <div className="h-8 w-8 shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-white/5">
                 <MapPin className="h-3.5 w-3.5 text-copper" />
               </div>
               <p className="font-medium tracking-wide pt-1.5 leading-relaxed">
-                {siteConfig.address.city}, {siteConfig.address.state} <br />
-                <span className="text-cream/50 text-xs">Serving the {siteConfig.address.region}</span>
+                {siteConfig.serviceArea} <br />
+                <span className="text-cream/50 text-xs">and surrounding areas</span>
               </p>
             </div>
           </div>

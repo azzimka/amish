@@ -42,7 +42,7 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        title: "Chicago Suburb Build",
+        title: "Cape Cod Garage",
         tag: "20×20 Cape Cod Style",
         before: "/before-after/broken_chicago.png",
         after: "/before-after/chicago_suburb_after.png",

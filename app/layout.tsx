@@ -14,9 +14,11 @@ export const viewport: Viewport = {
   themeColor: "#1a2e1a",
 };
 
+const siteTitle = `${siteConfig.name} | Premium Custom Garages in ${siteConfig.serviceArea}`;
+
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | Premium Custom Garages in ${siteConfig.address.region}`,
+    default: siteTitle,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -31,13 +33,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: `${siteConfig.name} | Built by Hand. Built to Last.`,
+    title: siteTitle,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteTitle,
     description: siteConfig.description,
   },
   robots: {
