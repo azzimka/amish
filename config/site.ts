@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "Built by Hand. Built to Last.",
   description:
     `Premium Amish-crafted garages in ${serviceArea} and surrounding areas. Custom-built with decades of tradition, quality materials, and a 10-year warranty. Get your free quote today.`,
-  url: "https://amishbuiltgarages.com",
+  url: "https://www.amishbuildgarages.com",
   ogImage: "/og-image.png",
   phone: "(312) 555-0147",
   email: "info@amishbuiltgarages.com",
