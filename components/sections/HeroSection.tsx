@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/config/site";
 
 // Smooth animated counter
 function Counter({ end, suffix = "", duration = 2 }: { end: number; suffix?: string; duration?: number }) {
@@ -164,7 +165,7 @@ export default function HeroSection() {
               <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/5 rounded-full border border-white/10">
                 <MapPin className="h-4 w-4 text-copper animate-bounce" />
                 <span className="text-[10px] text-cream/90 font-bold uppercase tracking-widest">
-                  USA, Chicagoland
+                  {siteConfig.serviceArea}
                 </span>
               </div>
             </div>

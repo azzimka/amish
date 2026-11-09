@@ -1,29 +1,26 @@
+const serviceArea = "Lakewood, Ohio";
+
 export const siteConfig = {
   name: "Amish Built Garages",
   tagline: "Built by Hand. Built to Last.",
   description:
-    "Premium Amish-crafted garages in the Chicago area. Custom-built with decades of tradition, quality materials, and a 10-year warranty. Get your free quote today.",
+    `Premium Amish-crafted garages in ${serviceArea} and surrounding areas. Custom-built with decades of tradition, quality materials, and a 10-year warranty. Get your free quote today.`,
   url: "https://amishbuiltgarages.com",
   ogImage: "/og-image.png",
   phone: "(312) 555-0147",
   email: "info@amishbuiltgarages.com",
-  address: {
-    city: "Chicago",
-    state: "IL",
-    region: "Chicagoland Area",
-  },
+  serviceArea,
   social: {
     facebook: "#",
     instagram: "#",
   },
   keywords: [
     "amish built garages",
-    "custom garages chicago",
+    "custom garages lakewood ohio",
     "garage builders near me",
     "amish garage construction",
-    "detached garage chicago",
-    "garage builder chicagoland",
-    "custom garage contractor illinois",
+    "detached garage lakewood ohio",
+    "garage builder lakewood ohio",
   ],
 } as const;
 
