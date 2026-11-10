@@ -7,8 +7,9 @@ export const siteConfig = {
     `Premium Amish-crafted garages in ${serviceArea} and surrounding areas. Custom-built with decades of tradition, quality materials, and a 10-year warranty. Get your free quote today.`,
   url: "https://www.amishbuildgarages.com",
   ogImage: "/og-image.png",
-  phone: "(312) 555-0147",
+  phone: "(216) 318-2456",
   email: "info@amishbuiltgarages.com",
+  businessHours: "Mon – Sat: 08:00 – 18:30",
   serviceArea,
   social: {
     facebook: "#",

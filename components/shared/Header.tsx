@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -95,16 +95,22 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* ── Phone + CTA ── */}
+          {/* ── Phone + Hours + CTA ── */}
           <div className="hidden sm:flex items-center gap-6">
             <a
               href={`tel:${siteConfig.phone.replace(/[^\d]/g, "")}`}
-              className="group flex items-center gap-2 text-[14px] font-medium text-cream/90 transition-colors hover:text-copper"
+              className="group flex flex-col items-start transition-colors"
             >
-              <div className="bg-white/5 p-2 rounded-full border border-white/10 group-hover:border-copper/50 transition-colors">
-                <Phone className="h-3.5 w-3.5" />
+              <div className="flex items-center gap-2 text-[14px] font-medium text-cream/90 group-hover:text-copper transition-colors">
+                <div className="bg-white/5 p-2 rounded-full border border-white/10 group-hover:border-copper/50 transition-colors">
+                  <Phone className="h-3.5 w-3.5" />
+                </div>
+                <span className="hidden md:inline font-semibold">{siteConfig.phone}</span>
               </div>
-              <span className="hidden md:inline">{siteConfig.phone}</span>
+              <div className="hidden xl:flex items-center gap-1.5 pl-8 text-[11px] font-medium tracking-wide text-cream/50 group-hover:text-cream/70 transition-colors">
+                <Clock className="h-2.5 w-2.5 text-copper/80" />
+                <span>{siteConfig.businessHours}</span>
+              </div>
             </a>
 
             <a
@@ -151,15 +157,21 @@ export default function Header() {
                   {link.label}
                 </motion.a>
               ))}
-              <div className="mt-4 pt-4 px-2 border-t border-white/10 flex flex-col gap-4">
+              <div className="mt-4 pt-4 px-2 border-t border-white/10 flex flex-col gap-3">
                 <a
                   href={`tel:${siteConfig.phone.replace(/[^\d]/g, "")}`}
-                  className="flex items-center gap-3 text-cream/80 text-base font-medium py-3 px-4 bg-white/5 rounded-2xl"
+                  className="flex items-center gap-3 text-cream/90 text-base font-medium py-3 px-4 bg-white/5 rounded-2xl"
                 >
                   <div className="bg-copper/20 p-2 rounded-full">
                     <Phone className="h-5 w-5 text-copper" />
                   </div>
-                  {siteConfig.phone}
+                  <div>
+                    <div className="font-semibold text-white">{siteConfig.phone}</div>
+                    <div className="text-xs text-cream/60 flex items-center gap-1.5 mt-0.5 font-normal">
+                      <Clock className="h-3 w-3 text-copper" />
+                      <span>{siteConfig.businessHours}</span>
+                    </div>
+                  </div>
                 </a>
                 <a
                   href="#quote"

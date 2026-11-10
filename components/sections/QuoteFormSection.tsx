@@ -3,8 +3,9 @@
 import { useActionState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Phone, Clock } from "lucide-react";
 import { submitQuote, type QuoteFormState } from "@/actions/leads";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const initialState: QuoteFormState = {
@@ -72,6 +73,20 @@ export default function QuoteFormSection() {
           <div className="flex items-center gap-4 border-l border-white/10 pl-6">
             <span className="text-2xl font-heading font-black text-white">03</span>
             <p className="text-sm text-cream/50 uppercase tracking-widest font-bold">Construction</p>
+          </div>
+
+          <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-cream/70">
+            <a
+              href={`tel:${siteConfig.phone.replace(/[^\d]/g, "")}`}
+              className="inline-flex items-center gap-2 hover:text-copper transition-colors font-semibold text-cream"
+            >
+              <Phone className="h-3.5 w-3.5 text-copper" />
+              <span>{siteConfig.phone}</span>
+            </a>
+            <div className="inline-flex items-center gap-1.5 text-cream/50">
+              <Clock className="h-3.5 w-3.5 text-copper" />
+              <span>{siteConfig.businessHours}</span>
+            </div>
           </div>
         </motion.div>
       </div>

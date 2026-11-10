@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 export default function Footer() {
@@ -57,6 +57,15 @@ export default function Footer() {
                 </div>
                 <span className="font-medium tracking-wide">{siteConfig.phone}</span>
               </a>
+              <div className="flex items-center gap-4 text-sm text-cream/90">
+                <div className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center bg-white/5">
+                  <Clock className="h-3.5 w-3.5 text-copper" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-medium tracking-wide text-cream">{siteConfig.businessHours}</span>
+                  <span className="text-[11px] text-cream/40">Working Hours</span>
+                </div>
+              </div>
               <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-4 text-sm text-cream hover:text-copper transition-colors">
                 <div className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-copper/30 group-hover:bg-copper/10 transition-colors">
                   <Mail className="h-3.5 w-3.5" />
